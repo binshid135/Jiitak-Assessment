@@ -1,5 +1,6 @@
 "use client";
 import { useRouter } from "next/navigation";
+import Image from 'next/image';
 
 
 export default function Header() {
@@ -11,9 +12,17 @@ export default function Header() {
     router.push('/auths/login');
   };
 
-    return (
-        <header className="bg-white text-black p-4 w-full border-b flex justify-end" style={{ borderColor: "rgb(245, 240, 233)" }}>
-            <img src="/My profile.svg" title="log out" className="cursor-pointer" onClick={handleLogout}></img>
-        </header>
-    );
+  return (
+    <header className="bg-white text-black p-4 w-full border-b flex justify-end" style={{ borderColor: "rgb(245, 240, 233)" }}>
+      <Image
+        src="/My profile.svg"
+        alt="Profile"
+        title="log out"
+        className="cursor-pointer"
+        onClick={handleLogout}
+        width={30}  
+        height={30} 
+      />
+    </header>
+  );
 }

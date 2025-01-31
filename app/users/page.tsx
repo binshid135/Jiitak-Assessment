@@ -15,7 +15,7 @@ const users = [
     { id: 10, nickname: 'ひまわりさん', email: 'dummy.address@example.net', birthDate: '1988年 4月', gender: 'その他', residence: '福岡', registrationDate: '2024年 01月 10日' },
 ];
 
-const page = () => {
+const Page = () => {
     return (
         <Workspace>
             <div>
@@ -25,4 +25,4 @@ const page = () => {
     )
 }
 
-export default page
+export default Page

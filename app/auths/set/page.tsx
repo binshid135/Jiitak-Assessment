@@ -6,7 +6,7 @@ import React, { useState } from 'react';
 import { useRouter } from "next/navigation";
 import bcrypt from 'bcryptjs';
 
-const page = () => {
+const Page = () => {
   const [password, setPassword] = useState<string>('');
   const [confirmPassword, setConfirmPassword] = useState<string>('');
   const [error, setError] = useState<string>('');
@@ -90,4 +90,4 @@ const page = () => {
   );
 }
 
-export default page;
+export default Page;

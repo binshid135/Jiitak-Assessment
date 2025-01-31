@@ -5,11 +5,9 @@ import CustomBarChart from '../components/BarChart';
 import DataCards from '../components/DataCards';
 import { Container, Row, Col } from 'react-bootstrap';
 
-import { useRouter } from "next/navigation";
 
-const page = () => {
+const Page = () => {
 
-    const router = useRouter();
 
     return (
         <Workspace>
@@ -81,4 +79,4 @@ const page = () => {
     )
 }
 
-export default page
+export default Page

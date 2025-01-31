@@ -8,7 +8,7 @@ import bcrypt from 'bcryptjs';
 
 
 
-const page = () => {
+const Page = () => {
   const router = useRouter();
   const [password, setPassword] = useState<string>('');
   const [confirmPassword, setConfirmPassword] = useState<string>('');
@@ -43,4 +43,4 @@ const page = () => {
   );
 }
 
-export default page;
+export default Page;

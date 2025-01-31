@@ -7,8 +7,12 @@ export default function Home() {
   const router = useRouter();
 
   useEffect(() => {
-    router.push('/auths/set')
-  }, [300])
+    const timer = setTimeout(() => {
+      router.push("/auths/set");
+    }, 1000); 
+
+    return () => clearTimeout(timer);
+  }, [router]);
 
 
 

@@ -1,7 +1,7 @@
 
 interface DataCardsProps {
     heading?: string,
-    date?: string,
+    // date?: string,
     value?: string,
     unit?: string,
     undertext?: string,
@@ -39,7 +39,7 @@ const DownArrow = () => (
 );
 
 
-const DataCards: React.FC<DataCardsProps> = ({ heading, date, value, unit, undertext, change, isRed }) => {
+const DataCards: React.FC<DataCardsProps> = ({ heading, value, unit, undertext, change, isRed }) => {
 
     return (
         <div className=" text-black rounded-lg shadow-md bg-white w-full">

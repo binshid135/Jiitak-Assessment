@@ -4,11 +4,12 @@ import InputFields from '@/app/components/InputFields'
 import TopBar from '@/app/components/TopBar'
 import React, { useState } from 'react'
 import { useRouter } from "next/navigation";
+import Image from 'next/image';
 
 
-const page = () => {
+
+const Page = () => {
   const router = useRouter();
-  const [email, setEmail] = useState<string>('');
   const [message, setMessage] = useState<string>('');
 
 
@@ -29,7 +30,7 @@ const page = () => {
         <p className="text-black set-subheading">現在使っているメールアドレスを入力してください。?
           パスワード再設定用のURLをメールで送信いたします。</p>
         <form onSubmit={handleSubmit}>
-          <InputFields label="メールアドレス" type="text" onChange={(e) => setEmail(e.target.value)} />
+          <InputFields label="メールアドレス" type="text" />
           <CustomButton title="パスワード再設定用URLを送信する" />
         </form>
         <button className='forgot-password' onClick={() => router.push('/auths/login')}>ログイン画面にもどる</button>
@@ -37,7 +38,13 @@ const page = () => {
       <footer className="py-4 flex justify-center">
         {message && (
           <div className='flex items-center bg-white rounded px-4 py-2 shadow-md w-[350px] justify-center'>
-            <img src="/Success.svg" alt="Success" className="mr-2" />
+            <Image
+              src="/Success.svg"
+              alt="Success"
+              className="mr-2"
+              width={20}  
+              height={20} 
+            />
             <p className='text-sm'>{message}</p>
           </div>
         )}
@@ -46,4 +53,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page
